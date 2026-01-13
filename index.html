@@ -1,113 +1,422 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyWeb Burger - Hamburgueria Moderna</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        :root {
+            --primary-color: #ff6b35;
+            --secondary-color: #f4a261;
+            --dark-color: #2a2a2a;
+            --light-color: #f8f9fa;
+            --gradient: linear-gradient(135deg, #ff6b35, #f4a261);
+        }
+    </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="100">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
-    <a href="#home" class="w3-bar-item w3-button">Gourmet au Catering</a>
-    <!-- Right-sided navbar links. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">Sobre nós</a>
-      <a href="#menu" class="w3-bar-item w3-button">Menu</a>
-      <a href="#vendas" class="w3-bar-item w3-button">Vendas</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contato</a>
+<!-- Navbar Moderna -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <i class="bi bi-egg-fried me-2"></i>
+            <span class="brand-text">MYWEB BURGER</span>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"><i class="bi bi-house-door me-1"></i> Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"><i class="bi bi-info-circle me-1"></i> Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu"><i class="bi bi-menu-button-wide me-1"></i> Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features"><i class="bi bi-star me-1"></i> Destaques</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="bi bi-telephone me-1"></i> Contato</a>
+                </li>
+                <li class="nav-item ms-2">
+                    <a href="#order" class="btn btn-order">Peça Agora</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-</div>
+</nav>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image" src="hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Le Catering</h1>
-  </div>
-</header>
-
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
-
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-    <div class="w3-col m6 w3-padding-large w3-hide-small">
-     <img src="tablesetting2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-1 fw-bold mb-4">
+                        O MELHOR <span class="text-highlight">BURGER</span> DA CIDADE
+                    </h1>
+                    <p class="lead mb-4">
+                        Experimente nossos hambúrgueres artesanais feitos com ingredientes selecionados e muito sabor!
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#menu" class="btn btn-primary btn-lg">
+                            <i class="bi bi-menu-button me-2"></i>Ver Cardápio
+                        </a>
+                        <a href="#order" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-basket me-2"></i>Pedir Online
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-burger">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         class="img-fluid rounded-4 shadow-lg" alt="Burger Delicioso">
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Catering</h1><br>
-      <h5 class="w3-center">Tradition since 1891</h5>
-      <p class="w3-large">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span class="w3-tag w3-light-grey">seasonal</span> ingredients.</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <a href="#about" class="scroll-down">
+            <i class="bi bi-chevron-down"></i>
+        </a>
     </div>
-  </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-    <div class="w3-col l6 w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
-      <h4>Bread Basket</h4>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
-    
-      <h4>Honey Almond Granola with Fruits</h4>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
-    
-      <h4>Belgian Waffle</h4>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
-    
-      <h4>Scrambled eggs</h4>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
-    
-      <h4>Blueberry Pancakes</h4>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
-    </div>
-    <h4>Fritata</h4>
-    <p class="w3-text-grey">Bread, bacon, eggs and ketchup 10.50</p>    
-  </div>
-    
-    <div class="w3-col l6 w3-padding-large">
-      <img src="tablesetting.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
-    </div>
-  </div>
+</section>
 
-  <hr>
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-image position-relative">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         class="img-fluid rounded-4 shadow" alt="Sobre Nós">
+                    <div class="experience-badge">
+                        <span class="number">10+</span>
+                        <span class="text">Anos<br>de Experiência</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-lg-5">
+                    <h2 class="section-title">Nossa História</h2>
+                    <p class="text-muted mb-4">
+                        Desde 2013, o MyWeb Burger vem revolucionando o conceito de hamburgueria artesanal. 
+                        Começamos com uma pequena barraca na feira e hoje somos referência em qualidade e sabor.
+                    </p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Ingredientes 100% naturais</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Pães artesanais diários</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Carnes selecionadas</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="bi bi-check-circle-fill text-success"></i>
+                            <span>Atendimento premium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stats mt-5">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <h3 class="fw-bold">5K+</h3>
+                                <p class="text-muted">Clientes Satisfeitos</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold">50+</h3>
+                                <p class="text-muted">Itens no Cardápio</p>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold">24/7</h3>
+                                <p class="text-muted">Delivery Disponível</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-64" id="contact">
-    <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-    <p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
-    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-    </form>
-  </div>
-  
-<!-- End page content -->
-</div>
+<!-- Menu Section -->
+<section id="menu" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nosso Cardápio</h2>
+            <p class="text-muted">Escolha seu burger favorito</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Item 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card menu-card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Classic Burger">
+                        <span class="badge price-badge">R$ 29,90</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Classic Burger</h5>
+                        <p class="card-text text-muted">
+                            Pão brioche, blend 180g, queijo cheddar, alface, tomate e molho especial.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="rating">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-half text-warning"></i>
+                            </div>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="bi bi-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card menu-card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Bacon Supreme">
+                        <span class="badge price-badge">R$ 34,90</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bacon Supreme</h5>
+                        <p class="card-text text-muted">
+                            Double bacon, blend 200g, queijo emental, cebola caramelizada e maionese de bacon.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="rating">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                            </div>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="bi bi-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card menu-card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top" alt="Veggie Delight">
+                        <span class="badge price-badge">R$ 26,90</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Veggie Delight</h5>
+                        <p class="card-text text-muted">
+                            Hambúrguer de grão-de-bico, abobrinha grelhada, rúcula e molho de iogurte.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="rating">
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star text-warning"></i>
+                            </div>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="bi bi-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Por que Escolher a MyWeb Burger?</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-truck"></i>
+                    </div>
+                    <h4>Delivery Rápido</h4>
+                    <p class="text-muted">Entrega em até 30 minutos ou o próximo pedido é por nossa conta!</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-award"></i>
+                    </div>
+                    <h4>Qualidade Garantida</h4>
+                    <p class="text-muted">Selos de qualidade e higiene em todas as nossas unidades.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card text-center p-4">
+                    <div class="feature-icon mb-3">
+                        <i class="bi bi-phone"></i>
+                    </div>
+                    <h4>App Proprietário</h4>
+                    <p class="text-muted">Baixe nosso app e ganhe benefícios exclusivos!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact/Order Section -->
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title text-white">Faça seu Pedido</h2>
+                <form id="orderForm" class="mt-4">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Telefone" required>
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control" placeholder="E-mail" required>
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control" rows="4" placeholder="Seu pedido..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-whatsapp me-2"></i>Enviar Pedido via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="contact-info">
+                    <h4><i class="bi bi-geo-alt me-2"></i>Nossa Localização</h4>
+                    <p class="mb-4">Rua do Burger, 123 - Centro, São Paulo - SP</p>
+                    
+                    <h4><i class="bi bi-clock me-2"></i>Horário de Funcionamento</h4>
+                    <p class="mb-4">Segunda a Sábado: 11h às 23h<br>Domingo: 12h às 22h</p>
+                    
+                    <h4><i class="bi bi-telephone me-2"></i>Contato</h4>
+                    <p class="mb-0">(11) 9999-9999</p>
+                    <p>contato@mywebburger.com</p>
+                    
+                    <div class="social-links mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<footer class="py-4">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0">&copy; 2024 MyWeb Burger. Todos os direitos reservados.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0">
+                    Desenvolvido com <i class="bi bi-heart-fill text-danger"></i> por 
+                    <a href="https://github.com/rogersrangel" class="text-decoration-none">rogersrangel</a>
+                </p>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript Personalizado -->
+<script src="js/script.js"></script>
+
+<script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 100) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
+
+    // Form submission
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Pedido enviado! Em breve entraremos em contato.');
+        this.reset();
+    });
+</script>
 
 </body>
 </html>
